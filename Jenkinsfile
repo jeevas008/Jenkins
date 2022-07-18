@@ -19,14 +19,32 @@ pipeline
 
     }
 
-
-
-
-    
-
     stages
 
-     {
+    {
+    stage('cleanup_workdir') 
+    
+    {
+
+    steps{   
+    
+    cleanWs()
+    
+    }
+    
+    }
+    stage('SCM') 
+    {
+
+    steps{
+
+    git credentialsId: 'jeevas008', url: 'https://github.com/jeevas008/Jenkins.git'  
+    
+    }
+    
+    }
+
+    
 
      stage('Build preparations')
 
@@ -69,12 +87,6 @@ pipeline
      }
 
      }
-
-
-
-
-
-
 
     stage('Docker push')
 
