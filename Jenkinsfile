@@ -45,7 +45,7 @@ stage('Docker build')
 
  //docker push images
 
- stage(Docker push) {
+ stage('Docker push') {
    steps {
     script {
         docker.withRegistry("$ECRURL", "$ECRCRED") 
