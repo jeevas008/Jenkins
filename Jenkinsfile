@@ -38,7 +38,7 @@ stages {
 stage('Docker build') {
  steps {
     script {
-        su docker.build("$IMAGE")
+        sudo docker.build("$IMAGE")
     }
  
  }
