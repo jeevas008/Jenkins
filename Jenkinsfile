@@ -26,23 +26,23 @@ stages {
     }
    }
  }
- // build Build preparations
- stage('Build preparations')
+ //build Build preparations
+ stage('Build preparations'){
    steps {
      script {
         echo "build docker images"
      }
    }
-
-// Docker build images
-stage('Docker build')
+ }
+//Docker build images
+stage('Docker build') {
  steps {
     script {
         docker.build("$IMAGE")
     }
  
  }
-
+}
  //docker push images
 
  stage('Docker push') {
