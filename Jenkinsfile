@@ -26,7 +26,7 @@ stages {
     }
    }
  }
- # build Build preparations
+ // build Build preparations
  stage('Build preparations')
    steps {
      script {
@@ -34,7 +34,7 @@ stages {
      }
    }
 
-# Docker build images
+// Docker build images
 stage('Docker build')
  steps {
     script {
@@ -43,7 +43,7 @@ stage('Docker build')
  
  }
 
- #docker push images
+ //docker push images
 
  stage(Docker push) {
    steps {
