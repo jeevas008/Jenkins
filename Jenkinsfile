@@ -6,7 +6,7 @@ environment
 
     PROJECT = 'jenkins'
 
-    IMAGE_TAG = "$PROJECT"
+    IMAGE = "$PROJECT"
 
     ECRURL = 'https://387232581030.dkr.ecr.us-east-1.amazonaws.com/jenkins'
 
@@ -38,7 +38,7 @@ stages {
 stage('Docker build') {
  steps {
     script {
-        docker.build("$IMAGE_TAG")
+        docker.build("$IMAGE")
     }
  
  }
@@ -50,7 +50,7 @@ stage('Docker build') {
     script {
         docker.withRegistry("$ECRURL", "$ECRCRED") 
         {
-          docker.image("$IMAGE_TAG").push("$VERSION")
+          docker.image("$IMAGE").push("$VERSION")
         }
     }
    }
