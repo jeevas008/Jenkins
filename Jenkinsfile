@@ -30,7 +30,7 @@ stages {
  stage('Build preparations'){
    steps {
      script {
-        echo "build docker images"
+        echo "build docker images $BUILD_NUMBER"
      }
    }
  }
