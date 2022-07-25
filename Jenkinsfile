@@ -4,7 +4,7 @@ environment
   {
     VERSION = '$BUILD_NUMBER'
 
-    PROJECT = "jenkins"
+    PROJECT = 'jenkins'
 
     IMAGE = "$PROJECT"
 
