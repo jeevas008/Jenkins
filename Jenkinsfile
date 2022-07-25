@@ -8,7 +8,7 @@ environment
 
     IMAGE = "$PROJECT"
 
-    ECRURL = '387232581030.dkr.ecr.us-east-1.amazonaws.com/jenkins'
+    ECRURL = 'aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 387232581030.dkr.ecr.us-east-1.amazonaws.com'
 
     ECRCRED = 'ecr:us-east-1:jenkins-ecr-credentials'
   }
