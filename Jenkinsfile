@@ -6,7 +6,7 @@ environment
 
     PROJECT = 'jenkins'
 
-    IMAGE = "$PROJECT"
+    IMAGE = '$PROJECT'
 
     ECRURL = 'https://387232581030.dkr.ecr.us-east-1.amazonaws.com/jenkins'
 
